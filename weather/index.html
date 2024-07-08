@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather in Erbil</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom,#333, #87CEEB, #FFF);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: #cbecfde6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.temp {
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.time-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.time-bar img {
+    width: 30px;
+    height: 30px;
+}
+
+.time {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.additional-info {
+    margin-top: 20px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.additional-info p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .temp {
+        font-size: 28px;
+    }
+
+    .time {
+        font-size: 20px;
+    }
+
+    .additional-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .weather-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .temp {
+        font-size: 24px;
+    }
+
+    .time {
+        font-size: 18px;
+    }
+
+    .additional-info p {
+        font-size: 14px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather in Erbil</h1>
+        <div id="weather">Loading...</div>
+        <div class="time-bar">
+            <img id="time-icon" src="" alt="Time icon">
+            <span id="current-time" class="time">00:00</span>
+        </div>
+        <div class="additional-info" id="additional-info">
+            <p>Humidity: <span id="humidity">--</span>%</p>
+            <p>Wind Speed: <span id="wind-speed">--</span> m/s</p>
+            <p>Pressure: <span id="pressure">--</span> hPa</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
